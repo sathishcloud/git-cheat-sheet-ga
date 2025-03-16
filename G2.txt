@@ -1,0 +1,126 @@
+[-----------GIT-2-----------]
+====================
+
+#ec2-user
+#sudo -i
+#mkdir name
+#git init
+#ls -lrta
+#git status
+#vi test 		[add "first line"]
+#git status	[untracked file]
+#git add test
+#git commit -m "first line added"
+#git status	[when local and remote rope same git shows= working directory clean]
+# git diff
+---------------------------------------------------------------------------------------------------------------
+day 1 
+
+
+BRANCH
+
+#git branch	[shows master]
+#git branch dev
+#git branch	[* which one show star that is your staying branch]
+#git checkout dev
+#git log		[now shows copy from the master branches ----logs & if we have master branches 2 commits feture branches shows 2 commits]
+#vi test		[now show old codes --> you should add anything the file well be modified]
+		*add the feature branch file like 3rd commit *
+#git status 	[now shows modified ]
+#git commit -am "thirdline added"
+#git log		[feature branch shows 3 logs why because here have 3 logs]		
+#git checkout master
+#git log		[here show old commits log]
+
+
+now merging consepts
+
+#git checkout master	[we only merge in master]
+#git merge dev		[now smoothly merge]
+
+=========================================================================
+--------------------[conflict method]------------------------
+
+#mkdir santhosh
+#cd santhosh
+#ls -lrta
+#git init
+#vi greens	[first line]
+#git add greens
+#git commit -m "first line added"
+#vi greens	[second line]
+#git add greens
+#git commit -m "second line added"
+#git log			[ now shows 2 commits logs in master]
+
+#git branch dev		[now copy from the branch and get feature branch & that have two logs]
+#git checkout dev		
+#git log			[here show 2 logs]
+
+#git checkout master	
+#vi greens		[third line add]
+#git add greens
+#git commit -m "third line added"
+#git log			[now your master branch have 3 commits]
+
+#git checkout dev		
+#git log			[now master branch shows 3 logs]
+#vi greens		[add *12331* as a third line]
+#vi add greens
+#vi commit -m "third line added "12331'
+
+#git checkout master	
+#git merge dev		[now conflict our codes]
+
+
+
+
+
+
+
+======conflicted==========
+#vi greens		[now your codes conflicted]
+
+how to solve this problem ?
+the name *vim diff*that sort out conflict problem 
+
+merge.tool vimdiff
+
+
+*git config --global merge.tool vimdiff
+*git config --global merge.conflictstyle diff3
+*git config --global mergetool.prompt false
+*git mergetool
+*:diffg LO/BA/RE
+*:wqa!
+ls 	[show greens.org=this  is back up file ]
+delete that file
+
+
+
+
+
+
+==================================================
+git config --global user.name "sathish"
+git config --global user.email "sathishcloud22@gmail.com"
+
+git merge
+git checkout
+git branch
+git mergertool 
+
+git config --global merge.tool vimdiff
+git config --global merge.conflictstyle diff3
+git config --global mergetool.prompt false
+:wqa!
+
+
+git rebase master
+
+
+git cherry-pick?
+git clone
+git stash
+
+git rev-list --count branch name

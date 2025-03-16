@@ -1,0 +1,158 @@
+----[git]-----
+==============
+
+version controlling system?
+
+previous and current stored code
+
+-----[github]-----
+==================
+
+must create github account
+
+---------
+version control system
+
+centralized version control system (cvcs)
+distributed version control system (dvcs)
+
+#ec2-user
+#sudo -i
+#yum update -y
+#yum install git -y
+
+
+#mkdir file		[making folder/repo]
+#ls 				[shows what dir you have]
+#cd file			[folder/repo name]
+#ls -lrta			[show hidden files]
+#git init 			[git comes under the local repo "git init is a command of creating local repo"]
+#ls -lrta			[now shows git-hidden file]
+-------now your initialize git--------------
+
+
+#vi test			[create file and add content (my first line added)]
+#git status		[now show the file is untracked]
+#git add test 		[now add the file]
+#git log			[now showing logs what you have ( staging area does'n create logs)]
+-------now your file moves staging area--------
+
+
+#git commit -m "what message you pass here" [ commit and message passing area]
+#git log			[ now shows what log do you have]
+-------now your file moves local repo---------
+
+
+#git config --global user.name "sathish"
+#git config --global user.email "sathishcloud22@gmail.com"
+--------this command for root user this replicate every for and whole server---------
+
+
+#git config user.name "sathish"
+#git config user.email "sathishcloud22@gmail"
+--------this command is used sub user changing user name------
+
+
+#vi test		[now change the file content and check "git status"]
+#git status		[now showing -modified your in staging area ]
+#git commit -m "second line added" 
+#git log		[now showing logs]
+---------now give command "git status - shows working tree clean"--------------
+
+
+#vi test		[add on content in your file " third line added"]
+#git status		[now showing modified with red colour M]
+#git commit -am "third line added"	[now you add and message at the same time in single command 	]
+				[/ then this command work when you add the file to staging area	]
+				[when the file is untracked this command is not any use	]
+---------now give git log show 3 commits---------------------------------------------------
+
+
+
+=====================================================
+--------[now pull and push methods of your repository]----------
+=====================================================
+
+[create a new repository on the command line]
+-----------------------------------------------------------------
+
+echo "# yesbank001" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+
+git remote add origin https://github.com/sathishcloud/yesbank001.git 
+git push -u origin main / change [master]
+
+
+example:-		git remote add origin https://github.com/sathishcloud/yesbank001.git 
+		git remote add sathish	
+=    [in real time we dont use this big URL WE USE THAT "orgin=name what ever and use that perticular name"]
+
+example:-		git push -u orgin main
+=		git push -u sathish master
+*git remote* give this show what ever remote have that shows you
+
+
+
+[push an existing repository from the command line]
+--------------------------------------------------------------------------
+git remote add origin https://github.com/sathishcloud/yesbank001.git
+git branch -M main
+git push -u origin main
+
+
+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
+
+
+git remote add sathish https://github.com/sathishcloud/git-repo003.git
+
+
+
+git commit --amend (correctly spelled) is actually more dangerous than git commit -a -m "mend" . The former will rewrite an existing commit, replacing it by a new commit, so this is more or less a destructive command. The latter however will just create a commit that you didn't intend to do.
+
+--------------------------------------------------------------------------
+
+
+git init 
+git add 
+git commit -m 
+git commit -am 
+git log 
+git log --oneline
+git branch 
+git checkout 
+git checkout -b 
+git remote add
+git push -m main
+git config user.name
+git config user.email
+git pull
+git fetch
+git clone 
+git status 
+git stash * temporary storage
+git show (stash id )
+git stash list ( it will show multiple stash id )
+git stash pop stash id ( cut(stash) and paste(master - code)
+git stash apply stash id (copy(stash id and paster (master - code)
+git stash drop stash id ( it will delete particular stash)
+git stash clear ( it will delete entire stash)
+less index.html :q
+git --all 
+git restore <file>
+(use "git rm --cached <file>..." to unstage)
+
+
+
+
+
+
+
+
+
+
+
+
+
